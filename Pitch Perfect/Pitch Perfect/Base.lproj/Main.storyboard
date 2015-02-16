@@ -42,6 +42,9 @@
                                 <variation key="widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="175" y="497" width="50" height="50"/>
                                 </variation>
+                                <connections>
+                                    <action selector="stopRecording:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="WNo-rZ-mF0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -86,6 +89,7 @@
                     </view>
                     <connections>
                         <outlet property="recordingInProgress" destination="BkX-f2-Zs0" id="t7V-vn-eCL"/>
+                        <outlet property="stopButton" destination="1ej-DZ-htS" id="bLi-XN-8Zl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
