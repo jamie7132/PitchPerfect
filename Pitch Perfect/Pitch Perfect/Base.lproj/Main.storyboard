@@ -25,28 +25,66 @@
                                     <action selector="playSlowAudio:" destination="DbB-JO-Tj8" eventType="touchUpInside" id="ede-UT-nnK"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Weo-HO-NAh">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="fast">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playFastAudio:" destination="DbB-JO-Tj8" eventType="touchUpInside" id="4iJ-7B-c74"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="51a-Cp-XCm">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="stop">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopAudio:" destination="DbB-JO-Tj8" eventType="touchUpInside" id="yib-w7-Rz2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Weo-HO-NAh" secondAttribute="trailing" constant="14" id="36V-NF-Ivb">
+                                <variation key="widthClass=compact" constant="30"/>
+                            </constraint>
                             <constraint firstItem="8au-e6-oJ6" firstAttribute="top" secondItem="PhD-v8-FeZ" secondAttribute="bottom" constant="50" id="6zL-E7-z8p"/>
+                            <constraint firstAttribute="centerX" secondItem="51a-Cp-XCm" secondAttribute="centerX" id="KKd-tF-hZf"/>
+                            <constraint firstItem="2Dk-9k-TOo" firstAttribute="top" secondItem="51a-Cp-XCm" secondAttribute="bottom" constant="43" id="QWM-Xw-iC6">
+                                <variation key="widthClass=compact" constant="50"/>
+                            </constraint>
+                            <constraint firstItem="Weo-HO-NAh" firstAttribute="top" secondItem="PhD-v8-FeZ" secondAttribute="bottom" constant="50" id="R2H-aE-GYW"/>
                             <constraint firstItem="8au-e6-oJ6" firstAttribute="leading" secondItem="7UJ-jh-Xfg" secondAttribute="leadingMargin" constant="30" id="gG5-rk-MPa"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="8au-e6-oJ6"/>
+                                <exclude reference="Weo-HO-NAh"/>
+                                <exclude reference="51a-Cp-XCm"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="6zL-E7-z8p"/>
                                 <exclude reference="gG5-rk-MPa"/>
+                                <exclude reference="36V-NF-Ivb"/>
+                                <exclude reference="R2H-aE-GYW"/>
+                                <exclude reference="KKd-tF-hZf"/>
+                                <exclude reference="QWM-Xw-iC6"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="8au-e6-oJ6"/>
+                                <include reference="Weo-HO-NAh"/>
+                                <include reference="51a-Cp-XCm"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="6zL-E7-z8p"/>
                                 <include reference="gG5-rk-MPa"/>
+                                <include reference="36V-NF-Ivb"/>
+                                <include reference="R2H-aE-GYW"/>
+                                <include reference="KKd-tF-hZf"/>
+                                <include reference="QWM-Xw-iC6"/>
                             </mask>
                         </variation>
                     </view>
@@ -90,9 +128,6 @@
                                 <state key="normal" image="stop">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="175" y="497" width="50" height="50"/>
-                                </variation>
                                 <connections>
                                     <action selector="stopRecording:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="WNo-rZ-mF0"/>
                                     <segue destination="DbB-JO-Tj8" kind="show" id="MBV-7t-67O"/>
@@ -104,9 +139,14 @@
                             <constraint firstAttribute="centerX" secondItem="pqB-GE-NCo" secondAttribute="centerX" id="8q6-w8-Sii"/>
                             <constraint firstAttribute="centerY" secondItem="pqB-GE-NCo" secondAttribute="centerY" id="D66-kC-vHD"/>
                             <constraint firstAttribute="centerX" secondItem="BkX-f2-Zs0" secondAttribute="centerX" constant="-0.5" id="LML-uf-f8Z"/>
-                            <constraint firstItem="1ej-DZ-htS" firstAttribute="top" secondItem="BkX-f2-Zs0" secondAttribute="bottom" constant="118" id="QJ3-NL-qK9"/>
+                            <constraint firstItem="1ej-DZ-htS" firstAttribute="top" secondItem="BkX-f2-Zs0" secondAttribute="bottom" constant="118" id="QJ3-NL-qK9">
+                                <variation key="widthClass=compact" constant="120"/>
+                            </constraint>
                             <constraint firstAttribute="centerX" secondItem="1ej-DZ-htS" secondAttribute="centerX" id="WhA-9K-LXm"/>
                             <constraint firstItem="BkX-f2-Zs0" firstAttribute="top" secondItem="pqB-GE-NCo" secondAttribute="bottom" constant="8" id="Y4w-pB-y5W"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="1ej-DZ-htS" secondAttribute="bottom" constant="53" id="shT-5e-eq8">
+                                <variation key="widthClass=compact" constant="50"/>
+                            </constraint>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -121,6 +161,7 @@
                                 <exclude reference="Y4w-pB-y5W"/>
                                 <exclude reference="QJ3-NL-qK9"/>
                                 <exclude reference="WhA-9K-LXm"/>
+                                <exclude reference="shT-5e-eq8"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -134,8 +175,9 @@
                                 <include reference="D66-kC-vHD"/>
                                 <include reference="LML-uf-f8Z"/>
                                 <include reference="Y4w-pB-y5W"/>
-                                <include reference="QJ3-NL-qK9"/>
+                                <exclude reference="QJ3-NL-qK9"/>
                                 <include reference="WhA-9K-LXm"/>
+                                <include reference="shT-5e-eq8"/>
                             </mask>
                         </variation>
                     </view>
@@ -170,6 +212,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="fast" width="100" height="100"/>
         <image name="recording" width="100" height="100"/>
         <image name="slow" width="100" height="100"/>
         <image name="stop" width="50" height="50"/>
