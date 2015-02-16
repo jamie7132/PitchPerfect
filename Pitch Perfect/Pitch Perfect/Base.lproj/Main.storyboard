@@ -22,14 +22,14 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="playSlow:" destination="DbB-JO-Tj8" eventType="touchUpInside" id="aBu-Js-FCs"/>
+                                    <action selector="playSlowAudio:" destination="DbB-JO-Tj8" eventType="touchUpInside" id="ede-UT-nnK"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="8au-e6-oJ6" firstAttribute="top" secondItem="PhD-v8-FeZ" secondAttribute="bottom" constant="25" id="6zL-E7-z8p"/>
-                            <constraint firstItem="8au-e6-oJ6" firstAttribute="leading" secondItem="7UJ-jh-Xfg" secondAttribute="leadingMargin" constant="10" id="gG5-rk-MPa"/>
+                            <constraint firstItem="8au-e6-oJ6" firstAttribute="top" secondItem="PhD-v8-FeZ" secondAttribute="bottom" constant="50" id="6zL-E7-z8p"/>
+                            <constraint firstItem="8au-e6-oJ6" firstAttribute="leading" secondItem="7UJ-jh-Xfg" secondAttribute="leadingMargin" constant="30" id="gG5-rk-MPa"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">

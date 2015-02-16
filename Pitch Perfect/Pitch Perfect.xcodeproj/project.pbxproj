@@ -14,6 +14,7 @@
 		4B3F01171A91E85300E41A37 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B3F01151A91E85300E41A37 /* LaunchScreen.xib */; };
 		4B3F01231A91E85300E41A37 /* Pitch_PerfectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3F01221A91E85300E41A37 /* Pitch_PerfectTests.swift */; };
 		4B3F012D1A91EEA800E41A37 /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3F012C1A91EEA800E41A37 /* PlaySoundsViewController.swift */; };
+		4B3F012F1A91F1D600E41A37 /* movie_quote.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4B3F012E1A91F1D600E41A37 /* movie_quote.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		4B3F01211A91E85300E41A37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B3F01221A91E85300E41A37 /* Pitch_PerfectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pitch_PerfectTests.swift; sourceTree = "<group>"; };
 		4B3F012C1A91EEA800E41A37 /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundsViewController.swift; sourceTree = "<group>"; };
+		4B3F012E1A91F1D600E41A37 /* movie_quote.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = movie_quote.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 		4B3F010A1A91E85300E41A37 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4B3F012E1A91F1D600E41A37 /* movie_quote.mp3 */,
 				4B3F010B1A91E85300E41A37 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -197,6 +200,7 @@
 			files = (
 				4B3F01121A91E85300E41A37 /* Main.storyboard in Resources */,
 				4B3F01171A91E85300E41A37 /* LaunchScreen.xib in Resources */,
+				4B3F012F1A91F1D600E41A37 /* movie_quote.mp3 in Resources */,
 				4B3F01141A91E85300E41A37 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
