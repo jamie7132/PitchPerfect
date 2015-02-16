@@ -1,9 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="77W-el-DYB">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="phm-WV-JDX">
+            <objects>
+                <viewController id="DbB-JO-Tj8" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PhD-v8-FeZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="2Dk-9k-TOo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7UJ-jh-Xfg">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2W2-4W-xYG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2124" y="-359"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
@@ -44,6 +61,7 @@
                                 </variation>
                                 <connections>
                                     <action selector="stopRecording:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="WNo-rZ-mF0"/>
+                                    <segue destination="DbB-JO-Tj8" kind="show" id="MBV-7t-67O"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -87,13 +105,34 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="lPT-kv-7jt"/>
                     <connections>
+                        <outlet property="recordButton" destination="pqB-GE-NCo" id="lpF-Sn-iML"/>
                         <outlet property="recordingInProgress" destination="BkX-f2-Zs0" id="t7V-vn-eCL"/>
                         <outlet property="stopButton" destination="1ej-DZ-htS" id="bLi-XN-8Zl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1290" y="-359"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Zld-aq-GCc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="77W-el-DYB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xYw-md-reo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="zvp-mO-SAL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cz1-Gg-tGD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="379.5" y="-359"/>
         </scene>
     </scenes>
     <resources>
