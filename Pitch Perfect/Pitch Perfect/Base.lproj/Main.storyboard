@@ -96,7 +96,7 @@
         <!--Record-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="RecordSoundsViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -114,15 +114,6 @@
                                     <action selector="recordAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="2qx-tL-x6a"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recording" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BkX-f2-Zs0">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="164" y="358" width="73" height="21"/>
-                                </variation>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ej-DZ-htS">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" image="stop">
@@ -130,20 +121,37 @@
                                 </state>
                                 <connections>
                                     <action selector="stopRecording:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="WNo-rZ-mF0"/>
-                                    <segue destination="DbB-JO-Tj8" kind="show" id="MBV-7t-67O"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recording" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BkX-f2-Zs0">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="169" y="369" width="73" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="pqB-GE-NCo" secondAttribute="centerX" id="8q6-w8-Sii"/>
                             <constraint firstAttribute="centerY" secondItem="pqB-GE-NCo" secondAttribute="centerY" id="D66-kC-vHD"/>
-                            <constraint firstAttribute="centerX" secondItem="BkX-f2-Zs0" secondAttribute="centerX" constant="-0.5" id="LML-uf-f8Z"/>
+                            <constraint firstItem="BkX-f2-Zs0" firstAttribute="top" secondItem="pqB-GE-NCo" secondAttribute="bottom" constant="8" id="Gdy-Ey-aWg"/>
+                            <constraint firstAttribute="centerX" secondItem="BkX-f2-Zs0" secondAttribute="centerX" constant="-0.5" id="Jqm-l9-45I"/>
+                            <constraint firstAttribute="centerX" secondItem="BkX-f2-Zs0" secondAttribute="centerX" constant="-0.5" id="LML-uf-f8Z">
+                                <variation key="widthClass=compact" constant="0.0"/>
+                            </constraint>
                             <constraint firstItem="1ej-DZ-htS" firstAttribute="top" secondItem="BkX-f2-Zs0" secondAttribute="bottom" constant="118" id="QJ3-NL-qK9">
                                 <variation key="widthClass=compact" constant="120"/>
                             </constraint>
                             <constraint firstAttribute="centerX" secondItem="1ej-DZ-htS" secondAttribute="centerX" id="WhA-9K-LXm"/>
                             <constraint firstItem="BkX-f2-Zs0" firstAttribute="top" secondItem="pqB-GE-NCo" secondAttribute="bottom" constant="8" id="Y4w-pB-y5W"/>
+                            <constraint firstAttribute="centerX" secondItem="BkX-f2-Zs0" secondAttribute="centerX" constant="-0.5" id="cBh-7u-Dxt"/>
+                            <constraint firstAttribute="centerX" secondItem="BkX-f2-Zs0" secondAttribute="centerX" constant="-5.5" id="gpB-uf-QJc"/>
+                            <constraint firstItem="BkX-f2-Zs0" firstAttribute="top" secondItem="pqB-GE-NCo" secondAttribute="bottom" constant="8" id="og3-ia-8it">
+                                <variation key="widthClass=compact" constant="12"/>
+                            </constraint>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="1ej-DZ-htS" secondAttribute="bottom" constant="53" id="shT-5e-eq8">
                                 <variation key="widthClass=compact" constant="50"/>
                             </constraint>
@@ -151,14 +159,19 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="pqB-GE-NCo"/>
-                                <exclude reference="BkX-f2-Zs0"/>
                                 <exclude reference="1ej-DZ-htS"/>
+                                <exclude reference="BkX-f2-Zs0"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="8q6-w8-Sii"/>
                                 <exclude reference="D66-kC-vHD"/>
+                                <exclude reference="Gdy-Ey-aWg"/>
+                                <exclude reference="Jqm-l9-45I"/>
                                 <exclude reference="LML-uf-f8Z"/>
                                 <exclude reference="Y4w-pB-y5W"/>
+                                <exclude reference="cBh-7u-Dxt"/>
+                                <exclude reference="gpB-uf-QJc"/>
+                                <exclude reference="og3-ia-8it"/>
                                 <exclude reference="QJ3-NL-qK9"/>
                                 <exclude reference="WhA-9K-LXm"/>
                                 <exclude reference="shT-5e-eq8"/>
@@ -167,14 +180,19 @@
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="pqB-GE-NCo"/>
-                                <include reference="BkX-f2-Zs0"/>
                                 <include reference="1ej-DZ-htS"/>
+                                <include reference="BkX-f2-Zs0"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="8q6-w8-Sii"/>
                                 <include reference="D66-kC-vHD"/>
-                                <include reference="LML-uf-f8Z"/>
-                                <include reference="Y4w-pB-y5W"/>
+                                <exclude reference="Gdy-Ey-aWg"/>
+                                <include reference="Jqm-l9-45I"/>
+                                <exclude reference="LML-uf-f8Z"/>
+                                <exclude reference="Y4w-pB-y5W"/>
+                                <exclude reference="cBh-7u-Dxt"/>
+                                <exclude reference="gpB-uf-QJc"/>
+                                <include reference="og3-ia-8it"/>
                                 <exclude reference="QJ3-NL-qK9"/>
                                 <include reference="WhA-9K-LXm"/>
                                 <include reference="shT-5e-eq8"/>
@@ -186,6 +204,7 @@
                         <outlet property="recordButton" destination="pqB-GE-NCo" id="lpF-Sn-iML"/>
                         <outlet property="recordingInProgress" destination="BkX-f2-Zs0" id="t7V-vn-eCL"/>
                         <outlet property="stopButton" destination="1ej-DZ-htS" id="bLi-XN-8Zl"/>
+                        <segue destination="DbB-JO-Tj8" kind="show" identifier="stopRecording" id="bgk-GE-NhY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
